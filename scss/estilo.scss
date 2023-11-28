@@ -1,0 +1,249 @@
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@200&family=Work+Sans:wght@300&display=swap");
+@import "_mixins.scss";
+@import "_variables.scss";
+@import"_operaciones.scss";
+
+
+
+body {
+  font-family: "Urbanist", sans-serif;
+  background-color: beige;
+  width: $max - 900;
+}
+/* HEADER */
+
+.logo {
+  @include med(100%, 100px);
+}
+
+.encabezado {
+  background-color: $color-principal;
+  border-top: 20px solid $backg-color;
+  width: $max - 900;
+}
+
+.menuNav a {
+  font-size: 1rem;
+  font-weight: $fontstyle;
+  border-left: 2px solid $border-color;
+  border-right: 2px solid $border-color;
+  padding: 0;
+  margin-right: 20px;
+
+  &:hover {
+    background-color: $backg-color;
+    color: $color-principal;
+    /* color: fafafa cambia el color de la fuente del menu */
+  }
+}
+/* IMAGENES CAROUSEL*/
+
+.carouselExample {
+  max-width: $med - 400;
+  max-height: $med - 300;
+  height: auto;
+}
+
+/* PRODUCTOS */
+
+.productos {
+  background-color: $backg-color;
+  color: $color-principal;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: $fontstyle;
+  padding: 6px;
+  
+
+  h1 {
+    font-size: 1.5rem;
+    color: rgb(148, 148, 110);
+  }
+}
+
+/* BOTONES */
+
+.btnBoton {
+  background-color: rgb(88, 88, 63);
+  color: $color-principal;
+}
+
+/* CARDS */
+
+.card {
+  margin: none;
+  color: black;
+  background-color: beige;
+  
+
+  img {
+    @include med(10px, 80%);
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    cursor: pointer;
+    
+  }
+}
+
+
+
+
+main .card {
+  align-items: center;
+  @include borpad(80px, none );
+  background-color: rgb(235, 235, 215);
+  cursor: pointer;
+  
+
+  p {
+    padding: 30px;
+    font-size: 15px;
+    
+  }
+}
+
+/* Productos.html */
+
+@keyframes texto {
+  0% {
+      opacity: 0;
+  }
+
+  100% {
+      opacity: 100%;
+  }
+}
+
+h1 {
+  animation-name: texto;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  @include font(center, 30px);
+  width: $max - 900;
+  height: bold;
+}
+
+
+h3 {
+  @include font(center, 20px);
+  width: 100%;
+}
+
+/* Informacion */
+
+.info {
+  text-align: center;
+  width: $max - 900;
+  h1 {
+    font-weight: $fontstyle;
+    width: 100%;
+  }
+
+  p {
+    font-size: 20px;
+  }
+}
+
+p ins {
+  font-size: 25px;
+  width: 100%;
+}
+
+/* Comprar */
+
+.comprar {
+  text-align: center;
+
+  h1 {
+    font-weight: $fontstyle;
+    width: 100%;
+  }
+
+  p {
+    font-size: 20px;
+  }
+}
+
+h2 ins {
+  font-size: 25px;
+}
+
+section {
+  align-items: center;
+  
+  img {
+    width: 100%;
+  }
+}
+
+/* Contacto */
+
+.contacto {
+  align-items: center;
+  width: 100%;
+  margin: auto;
+  border-top: 100px;
+  margin-top: 50px;
+}
+
+.contact {
+  align-items: center;
+  border: none;
+}
+h1 {
+  font-weight: $fontstyle;
+  align-items: center;
+}
+
+p {
+  font-size: 20px;
+}
+
+form {
+  margin: 50px 50px 50px 30px;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  margin: auto;
+
+  label {
+    display: block;
+    font-weight: $fontstyle;
+    margin-bottom: 5px;
+    color: #333;
+    font-size: 15px;
+  }
+
+  input [type="text"],
+  textarea {
+    @include med(5px, 100%);
+    @include borpad(10px, 2px solid #ccc);
+    display: block;
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+  .inputNombre {
+    width: 100%;
+  }
+
+  &.inputNombre {
+    font-size: 10px;
+  }
+
+  &.inputContacto {
+    @include borpad(10px 20px, none);
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+}
+
+.texto p {
+  @include font(center, 13px);
+}

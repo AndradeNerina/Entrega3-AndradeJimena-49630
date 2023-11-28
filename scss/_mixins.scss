@@ -1,0 +1,16 @@
+//MIXINS
+
+@mixin med($border, $wid) {
+    border-radius: $border;
+    width: $wid;
+}
+  
+@mixin font($text, $font) {
+    text-align: $text;
+    font-size: $font;
+}
+  
+@mixin borpad($pad, $bord) {
+      padding: $pad;
+      border: $bord;
+}
